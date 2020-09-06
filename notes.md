@@ -28,4 +28,25 @@
     41...7f             (4 lines similar for katakana. +heart, question mark, period)
     0x80-0x89           0-9
     
+### kanji table
+
+    *slotted in around kana. 2 tiles tall each
+    
+    0x40, 0x50          金
+    0xA0, 0xB0          木
+    a1,b1               今
+    0xA2, 0xB2          何
+    A3,B3               時
+    a4,b4               行
+    a7,b7               店
+    ac,bc               電
+    c7,d7               家
+    ea,fa               夢
+    c0,d0               車
+    c1,d1               気
+    c2,d2               力
+    cc,dc               見
+    8d,98               高
+    8f,9f               
+    cd,dd               口
     
