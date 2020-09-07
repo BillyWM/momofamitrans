@@ -34,29 +34,70 @@
     
     * Search tools: https://kanji.sljfaq.org/mr.html / https://jisho.org/
     
-    0x20, 0x30          物
-    0x40, 0x50          金
-    0x60, 0x70          病        grade 3     ill,sick
-    0xA0, 0xB0          木
-    a1,b1               今
-    a5,b5               宝        grade 6     treasure,wealth,valuables
-    a6,b6               石                    stone (not "right"; left + right are together)
-    C6,D6               入
-    C9,D9               下
-    CA,DA               左
-    CB,DB               右
-    0xA2, 0xB2          何
-    A3,B3               時
-    a4,b4               行
-    a7,b7               店
-    ac,bc               電
-    c7,d7               家
-    ea,fa               夢
-    c0,d0               車
-    c1,d1               気
-    c2,d2               力
-    cc,dc               見
-    8d,98               高
-    8f,9f               点        *
-    cd,dd               口
+      (in column on left)
+    0x20, 0x30    物
+    0x40          金
+    0x60          病        grade 3     ill,sick
+    
+      (rows)
+      (first is not full row)
+      
+    0x8B, 0x9B          
+    0x8C
+    0x8D          高
+    0x8E
+    0x8F          点        *      
+      
+      (full rows)
+    0xA0, 0xB0    木
+    0xA1          今
+    0xA2          何
+    0xA3          時
+    0xA4          行
+    0xA5          宝        grade 6     treasure,wealth,valuables
+    0xA6          石                    stone (not "right"; left + right are together @0xCA, 0xCB)
+    0xA7          店
+    0xA8          員        *
+    0xA9          工                    ? unsure of this one; much wider on bottom in CHR
+    0xAA          
+    0xAB              
+    0xAC          電
+    0xAD          
+    0xAE          
+    0xAF          
+
+    0xC0          車
+    0xC1          気
+    0xC2          力
+    0xC3
+    0xC4
+    0xC5
+    0xC6          入
+    0xC7          家
+    0xC8
+    0xC9          下
+    0xCA          左
+    0xCB          右
+    0xCC          見
+    0xCD          口
+    0xCE
+    0xCF
+
+    0xE0
+    0xE1
+    0xE2
+    0xE3
+    0xE4
+    0xE5
+    0xE6          出
+    0xE7
+    0xE8          外
+    0xE9  
+    0xEA          夢
+    0xEB
+    0xEC
+    0xED
+    0xEE
+    0xEF
+
     
