@@ -62,8 +62,8 @@
     0xAA          
     0xAB              
     0xAC          電
-    0xAD          
-    0xAE          
+    0xAD          器        grade 4     vessel, container, utensil/tool/instrument, ability
+    0xAE          洋        grade 3     ocean, sea, foreign, western style
     0xAF          
 
     0xC0          車
@@ -88,13 +88,13 @@
     0xE2
     0xE3
     0xE4
-    0xE5
+    0xE5          土              (unsure; cross-stroke seems high in CHR)
     0xE6          出
     0xE7
     0xE8          外
-    0xE9  
+    0xE9          大
     0xEA          夢
-    0xEB
+    0xEB          思     grade 2     think
     0xEC
     0xED
     0xEE
