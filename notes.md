@@ -32,9 +32,19 @@
 
     *slotted in around kana. 2 tiles tall each
     
+    * Search tools: https://kanji.sljfaq.org/mr.html / https://jisho.org/
+    
+    0x20, 0x30          物
     0x40, 0x50          金
+    0x60, 0x70          病        grade 3     ill,sick
     0xA0, 0xB0          木
     a1,b1               今
+    a5,b5               宝        grade 6     treasure,wealth,valuables
+    a6,b6               石                    stone (not "right"; left + right are together)
+    C6,D6               入
+    C9,D9               下
+    CA,DA               左
+    CB,DB               右
     0xA2, 0xB2          何
     A3,B3               時
     a4,b4               行
@@ -47,6 +57,6 @@
     c2,d2               力
     cc,dc               見
     8d,98               高
-    8f,9f               
+    8f,9f               点        *
     cd,dd               口
     
