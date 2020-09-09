@@ -20,6 +20,8 @@
     * FExx probably control character for protraits
         * FE60 momo
         * FE65 dog
+#### first convo with parents
+* 01714F
     
 ### other locations (probable)
 * 0x17EDA seems like probable end for long script block.
