@@ -1,3 +1,19 @@
+## found text
+
+* FF for control characters?
+** FF01 seems to be \n
+** FF00 end of screen?
+** FF02 beginning of screen?
+
+### intro
+
+* First screen: 0x01EE4 - 0x01F1F
+* Third ends 0x01FC0
+    * (01FC1 onward isn't read when displaying)
+
+
+-------------------
+
 * ROM type: SL3ROM (SLROM-003; MMC1). 128KB PRG, 128KB CHR
     * No RAM
     
@@ -28,7 +44,7 @@
     41...7f             (4 lines similar for katakana. +heart, question mark, period)
     0x80-0x89           0-9
     
-### kanji table
+### kanji table (CHR)
 
     *slotted in around kana. 2 tiles tall each
     
