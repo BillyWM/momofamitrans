@@ -1,15 +1,50 @@
 ## found text
 
+### encoding
 * FF for control characters?
-** FF01 seems to be \n
-** FF00 end of screen?
-** FF02 beginning of screen?
+    * FF01 seems to be \n
+    * FF02 beginning of screen?
+    * FF00 end of screen?
+    
+### confirmed locations
 
-### intro
+#### intro
 
 * First screen: 0x01EE4 - 0x01F1F
 * Third ends 0x01FC0
     * (01FC1 onward isn't read when displaying)
+    
+#### first screen after title
+
+* 02BDC - starts with FF02 FEFF
+    * FExx probably control character for protraits
+        * FE60 momo
+        * FE65 dog
+    
+### other locations (probable)
+* 0x17EDA seems like probable end for long script block.
+    * Followed by FF06 FF02 FF00 then all FF
+* 1EACC to 1ED8A
+* 13246 to 13553
+* 13689 to 13EF9
+    * ends on same 6, 2, 0 control pattern
+* 140B6 to 14765
+* 1485E to 14917
+* 14B0B to 14C4B
+* 14D34 to 150C2
+* 15189 to 154F3
+* 155E6 to 158D8
+* 15B9B to 1677F
+* 16824 to 16C94
+* 16EC5 to 17934
+* 17A5B to 17EDA
+* 0B211 to 0B4B2
+    * starts with FF02 FF04 control; what is FF04? Also 2, 0 series preceding it
+* 7962 to 07CA2
+    * possibly more above. Interrupted by non-text data
+* ... to 03D68
+* B4B3 to B525 looks like a table of color names
+* B543 to BCB2
 
 
 -------------------
