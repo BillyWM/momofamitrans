@@ -1,0 +1,164 @@
+﻿R:000F:zp_kanatop
+R:0010:zp_kanabottom
+R:005A:busy_wait_flag
+R:005B:needmi_if_0
+R:005D:nmi_case_num:nmi switch...cases on this variable
+R:02BC:bitfield_pt5
+R:02C5:bitfield_pt1
+R:02C6:bitfield_pt3
+R:02CA:bitfield_pt2
+R:02CB:bitfield_pt4
+P:1972:big_important_sub:called shortly after reset
+P:1D3C:run_many_subs:Somehow related to init? gets here from big_important_sub
+P:10017:big_ram_init_sub:Initialize numerous non-ZP ram locations to various values
+P:1006D:skip_skiploop_check
+P:1007A:loop_807A
+P:10080:skip_loop_8080
+P:10343:loop_8343
+P:10351:skipjsr_8351
+P:109B4::X and Y as outside params?
+P:13AD3:set_033C_to_0_copy2
+P:13C75:set_033C_to_0_copy
+P:13DD5:set_033C_to_0
+P:15FFF:mmc1_bank_control
+P:17FFF:mmc1_chr0_select
+P:1C024:start_nmi
+P:1C02D::continue if vblank
+P:1C032:continue_if_vblank:num sprites to DMA?
+P:1C036::;DMA from page 7
+P:1C03B:skip_OAMDMA
+P:1C03F::if 5D was nonzero....
+P:1C041:__tgt6_nmi:Y = value at $0D
+P:1C04F:__tgt2_nmi
+P:1C05D:__tgt4_nmi
+P:1C064:__tgt5_nmi
+P:1C066:Char_printer
+P:1C085:__tgt1_nmi
+P:1C08C:__tgt7_nmi
+P:1C092:__tgt12_nmi
+P:1C09C:__tgt10_nmi
+P:1C0AE:__tgt11_nmi
+P:1C0BB:__tgt9_nmi
+P:1C0C2:__tgt13_nmi
+P:1C0C9:__tgt15_nmi
+P:1C0D0:__tgt3_nmi
+P:1C0D4:__tgt17_nmi
+P:1C0EB::Setting flag releases program from busy loop elsewhere
+P:1C124:nmi_do_3_subs_then_exit
+P:1C12D:reset_neednmi_and_exit
+P:1C131:nmi_exit:NMI routine makes jumps here if conditional branches not hit
+P:1C138:scroll_redraw:Basic redrawing loop(?)
+P:1C142::ZP $0C...$0E then kana...
+P:1C15B::Unrolled draw loop? ZP $11...$4B
+P:1C285:__tgt14_nmi
+P:1C33C:__tgt16_nmi
+P:1C40C:__tgt18_nmi
+P:1C4F0:Control_poll:During character rendering?
+P:1C4FB:loop_control_poll
+P:1C50B:after_reset:comes here after system reset
+P:1C51E:wait_C51E
+P:1C525:wait_C525
+P:1C5A2:skipjsr_C5A2
+P:1C5C5:skip_afterresetpt2:These 3 lines were not discovered as code by Mesen
+P:1C5CE:after_reset_pt2:JMPs here after reset routine
+P:1C623:busy_wait_on_5A:wait for $5A to be set to 0. Must be waiting for NMI to set?
+P:1C625:loop_busy_wait
+P:1C62B:loop_C62B
+P:1C67C:zero_out_5C
+P:1C6ED:block_copy_tiles_zp:Block copy from $02xx work ram to ZP, probably tile related. Triggered by scroll.
+P:1C6F3:loop_C6F3
+P:1CB48:loop_CB48
+P:1CB60:loop_CB60
+P:1CB71:loop_CB71
+P:1CF96:blank_all_bitfields:also blanks 2c7, 2c8
+P:1D031:store_1_in_02D5
+P:1D062:combine_bitfields_02c5:Combines 5 memory locations then does branch. Why?
+P:1D071::returns a 1 if combined flags don't match?
+P:1D074:cb_return1
+P:1D0A9:__case1
+P:1D0B1:__case2
+P:1D0BD:__case4
+P:1D0C4:__case5
+P:1D0CB:__case6
+P:1D0D2:__case3
+P:1D0DF:__case7
+P:1D0E7:__case8
+P:1D0FB:pre_char_load:Doing...something...before char load. Some conditional branches end up there. Some JSR to subs with params set into ZP
+P:1D11D:__target1
+P:1D125:__target2
+P:1D131:__target3
+P:1D13E:__target4
+P:1D145:__target5
+P:1D169:__target6
+P:1D17B:__target7
+P:1D188:__target8
+P:1D199:__target9
+P:1D1AD:do_char_load:branches here to start the load
+P:1D1AE:char_load_top:Top tile of next character
+P:1D1B3:char_load_bottom:bottom tile of next character
+P:1D1DD:skip_char_load
+P:1D1FD:blank_bitfields
+P:1D327:add_16bit:https://retrocomputing.stackexchange.com/questions/13941/why-use-an-adc-or-sbc-with-immediate-zero-on-a-6502
+P:1D65C:mystery_D65C:INC and STA to this mapper location
+P:1D65D:do_bankswitches:a=6, x=3
+P:1D66E:no_bankswitch
+P:1D682:bankswitch_chr0
+P:1D696:bankswitch_chr1
+P:1D6AA:bankswitch_prg
+P:1D6C7:loop_D6C7
+P:1D6DC:call_bankswitches_6_3
+P:1D6E3:call_bankswitches_A7_3
+P:1D6EA:call_bankswitches_complex1
+P:1D6FA:call_bankswitches_complex2
+P:1D70A:call_bankswitches_complex3
+P:1D71A:call_bankswitches_complex4
+P:1D788:loop_D788
+P:1D790:loop_D790
+P:1D7E7::if non-zero X, keep, otherwise x=4?
+P:1D7ED:no_inx
+P:1D7FD:nonzero_7F
+P:1D819:loop_D819
+P:1D821:loop_D821
+P:1D850:no_inx_2
+P:1D86E:loop_exit_D86E
+P:1D98A:fill_with_F8_by_4:Put F8 into every 4th byte on 07xx page
+P:1D98E:loop_D98E
+P:1DFFF:mmc1_chr1_select
+P:1E635:return_1:suspect it branches here as "return 1" statement?
+P:1E865:loop_E865
+P:1E872:loop_E872
+P:1E880:large_switch_case:0x10 - 0x19
+P:1EDA5::How can it not take this branch?
+P:1EDA9:mystery_EDA9
+P:1EDD5:exit_sub_EDD5
+P:1FFFF:mmc1_prg_select
+G:2000:PpuControl_2000:7  bit  0\n---- ----\nVPHB SINN\n|||| ||||\n|||| ||++- Base nametable address\n|||| ||    (0 = $2000; 1 = $2400; 2 = $2800; 3 = $2C00)\n|||| |+--- VRAM address increment per CPU read/write of PPUDATA\n|||| |     (0: add 1, going across; 1: add 32, going down)\n|||| +---- Sprite pattern table address for 8x8 sprites\n||||       (0: $0000; 1: $1000; ignored in 8x16 mode)\n|||+------ Background pattern table address (0: $0000; 1: $1000)\n||+------- Sprite size (0: 8x8; 1: 8x16)\n|+-------- PPU master/slave select\n|          (0: read backdrop from EXT pins; 1: output color on EXT pins)\n+--------- Generate an NMI at the start of the\n           vertical blanking interval (0: off; 1: on)
+G:2001:PpuMask_2001:7  bit  0\n---- ----\nBGRs bMmG\n|||| ||||\n|||| |||+- Display type: (0: color, 1: grayscale)\n|||| ||+-- 1: Show background in leftmost 8 pixels of screen, 0: Hide\n|||| |+--- 1: Show sprites in leftmost 8 pixels of screen, 0: Hide\n|||| +---- 1: Show background\n|||+------ 1: Show sprites\n||+------- Emphasize red\n|+-------- Emphasize green\n+--------- Emphasize blue
+G:2002:PpuStatus_2002:7  bit  0\n---- ----\nVSO. ....\n|||| ||||\n|||+-++++- Least significant bits previously written into a PPU register\n|||        (due to register not being updated for this address)\n||+------- Sprite overflow. The intent was for this flag to be set\n||         whenever more than eight sprites appear on a scanline, but a\n||         hardware bug causes the actual behavior to be more complicated\n||         and generate false positives as well as false negatives; see\n||         PPU sprite evaluation. This flag is set during sprite\n||         evaluation and cleared at dot 1 (the second dot) of the\n||         pre-render line.\n|+-------- Sprite 0 Hit.  Set when a nonzero pixel of sprite 0 overlaps\n|          a nonzero background pixel; cleared at dot 1 of the pre-render\n|          line.  Used for raster timing.\n+--------- Vertical blank has started (0: not in vblank; 1: in vblank).\n           Set at dot 1 of line 241 (the line *after* the post-render\n           line, false); cleared after reading $2002 and at dot 1 of the\n           pre-render line.
+G:2003:OamAddr_2003:Set OAM address - Write only
+G:2004:OamData_2004:Read/Write OAM data
+G:2005:PpuScroll_2005:Set PPU scroll, write twice - Write only
+G:2006:PpuAddr_2006:Set PPU address, write twice - Write only
+G:2007:PpuData_2007:Read/Write VRAM
+G:4000:Sq0Duty_4000:DDLC VVVV\nDuty (D), envelope loop / length counter halt (L), constant volume (C), volume/envelope (V)
+G:4001:Sq0Sweep_4001:EPPP NSSS\nSweep unit: enabled (E), period (P), negate (N), shift (S)
+G:4002:Sq0Timer_4002:TTTT TTTT\nTimer low (T)
+G:4003:Sq0Length_4003:LLLL LTTT\nLength counter load (L), timer high (T)
+G:4004:Sq1Duty_4004:DDLC VVVV\nDuty (D), envelope loop / length counter halt (L), constant volume (C), volume/envelope (V)
+G:4005:Sq1Sweep_4005:EPPP NSSS\nSweep unit: enabled (E), period (P), negate (N), shift (S)
+G:4006:Sq1Timer_4006:TTTT TTTT\nTimer low (T)
+G:4007:Sq1Length_4007:LLLL LTTT\nLength counter load (L), timer high (T)
+G:4008:TrgLinear_4008:CRRR RRRR\nLength counter halt / linear counter control (C), linear counter load (R)
+G:400A:TrgTimer_400A:TTTT TTTT\nTimer low (T)
+G:400B:TrgLength_400B:LLLL LTTT\nLength counter load (L), timer high (T)
+G:400C:NoiseVolume_400C:--LC VVVV\nEnvelope loop / length counter halt (L), constant volume (C), volume/envelope (V)
+G:400E:NoisePeriod_400E:L--- PPPP\nLoop noise (L), noise period (P)
+G:400F:NoiseLength_400F:LLLL L---\nLength counter load (L)
+G:4010:DmcFreq_4010:IL-- RRRR\nIRQ enable (I), loop (L), frequency (R)
+G:4011:DmcCounter_4011:-DDD DDDD\nLoad counter (D)
+G:4012:DmcAddress_4012:AAAA AAAA\nSample address (A)
+G:4013:DmcLength_4013:LLLL LLLL\nSample length (L)
+G:4014:SpriteDma_4014:Writing $XX will upload 256 bytes of data from CPU page $XX00-$XXFF to the internal PPU OAM.
+G:4015:ApuStatus_4015:Read:\nIF-D NT21\nDMC interrupt (I), frame interrupt (F), DMC active (D), length counter > 0 (N/T/2/1)\n\nWrite:\n---D NT21\nEnable DMC (D), noise (N), triangle (T), and pulse channels (2/1)
+G:4016:Ctrl1_4016:Read (NES - input):\n---4 3210\nRead data from controller port #1.\n\nWrite:\n---- ---A\nOutput data (strobe) to both controllers.
+G:4017:Ctrl2_FrameCtr_4017:Read (NES - input):\n---4 3210\nRead data from controller port #2.\n\nWrite (Frame counter): MI-- ----\nMode (M, 0 = 4-step, 1 = 5-step), IRQ inhibit flag (I)
