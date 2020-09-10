@@ -10,7 +10,7 @@
 
 #### intro
 
-* First screen: 0x01EE4 - 0x01F1F
+* First screen: 0x01EDF - 0x01F21
 * Third ends 0x01FC0
     * (01FC1 onward isn't read when displaying)
     
