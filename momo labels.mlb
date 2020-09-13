@@ -8,8 +8,15 @@ R:02C5:bitfield_pt1
 R:02C6:bitfield_pt3
 R:02CA:bitfield_pt2
 R:02CB:bitfield_pt4
+P:156F:prologue_graphics:nametable data for planet screen (to 01631)
+P:1632:prologue_graphics_2:Second screen
+P:16D3:prologue_graphics_2_end
+P:176F:title_graphics_start
+P:1971:title_graphics_end
 P:1972:big_important_sub:called shortly after reset
 P:1D3C:run_many_subs:Somehow related to init? gets here from big_important_sub
+P:2541:momo_house_graphics_start
+P:25EF:momo_house_graphics_end
 P:10017:big_ram_init_sub:Initialize numerous non-ZP ram locations to various values
 P:1006D:skip_skiploop_check
 P:1007A:loop_807A
@@ -17,11 +24,64 @@ P:10080:skip_loop_8080
 P:10343:loop_8343
 P:10351:skipjsr_8351
 P:109B4::X and Y as outside params?
+P:109E6:momo_sprite_code_pt1
+P:10C72:sprite_data_momo:For basic walking and jumping
+P:10CBF:sprite_data_momo_end
+P:10CD5:momo_sprite_code_pt2
+P:10EBC:momo_sprite_code_pt2_end
+P:11947:map_data_start
+P:11DE0:map_data_more:Jewlery store starts here. More areas below
+P:1236C:map_data_shops:main shops area; "fu ri - ji" to burgers
+P:1257D:map_data_more_shops:game corner to CDs
+P:12586:map_data_shops_end:burgers around here
+P:126E7:map_data_more_shops_end
 P:13AD3:set_033C_to_0_copy2
 P:13C75:set_033C_to_0_copy
 P:13DD5:set_033C_to_0
+P:1485E:text_music_shop
+P:14918:cd_shop_pointers_high:track name pointers
+P:14928:cd_shop_pointers_low:track name pointers (low half)
+P:14938:cd_shop_track_titles
+P:14AB7:cd_shop_track_titles_end
 P:15FFF:mmc1_bank_control
 P:17FFF:mmc1_chr0_select
+P:18314:pointer_table_music_related
+P:18353:pointer_table_music_related_end
+P:18832:music_sfx_related:Bytes around this area related to music and sfx. Probably more before this point.
+P:18A09:music_sfx_related_end
+P:18F48:music_pointers_cd_shop:First pointer 8F68 is to "mayonaka" track just below
+P:18F68:music_mayonaka:mayonaka no houmonsha
+P:19144:music_mayonaka_end
+P:19145:music_anzubayashide_start:anzubayashi de konnichi wa
+P:19324:music_anzubayashide_end
+P:19325:music_car_game_start:"chase hurry up!"
+P:195D2:music_car_game_end
+P:195D3:music_messenger_start:"Messenger"
+P:19731:music_messenger_end
+P:19732:music_game_over
+P:19782:music_game_over_end
+P:19783:music_fanfare_A
+P:197D2:music_fanfare_A_end
+P:197D3:music_hardboiled
+P:19ABC:music_hardboiled_end
+P:19ABD:music_koneko:koneko no kakurenbo
+P:19D14:music_koneko_end
+P:19D15:music_morning_light
+P:19DBB:music_morning_light_end
+P:19DBC:music_run_run_run
+P:1A048:music_run_run_run_end
+P:1A049:music_cd_shop:4 blocks. reads from 4 blocks while playing
+P:1A260:music_cd_shop_end
+P:1A261:music_title_screen:(as played from CD shop anyway)
+P:1A483:music_title_screen_end
+P:1A484:music_fanfare_b
+P:1A4C3:music_fanfare_B_end
+P:1A4C4:music_overworld
+P:1A8CE:music_overworld_end
+P:1A8CF:music_see_you_again:"shi- yu agein(heart)"
+P:1AC26:music_see_you_again_end
+P:1AC27:music_overworld_variation
+P:1B0FD:music_overworld_variation_end:possibly not true end
 P:1C024:start_nmi
 P:1C02D::continue if vblank
 P:1C032:continue_if_vblank:num sprites to DMA?
