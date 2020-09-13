@@ -1,4 +1,4 @@
-﻿R:000F:zp_kanatop
+R:000F:zp_kanatop
 R:0010:zp_kanabottom
 R:005A:busy_wait_flag
 R:005B:needmi_if_0
@@ -8,6 +8,8 @@ R:02C5:bitfield_pt1
 R:02C6:bitfield_pt3
 R:02CA:bitfield_pt2
 R:02CB:bitfield_pt4
+P:064D:momo_transform_start
+P:10CF:momo_transform_end
 P:156F:prologue_graphics:nametable data for planet screen (to 01631)
 P:1632:prologue_graphics_2:Second screen
 P:16D3:prologue_graphics_2_end
@@ -15,26 +17,66 @@ P:176F:title_graphics_start
 P:1971:title_graphics_end
 P:1972:big_important_sub:called shortly after reset
 P:1D3C:run_many_subs:Somehow related to init? gets here from big_important_sub
+P:1DEE:uknown_title_screen_related:possibly sprite / anim data of animal friends
+P:1E8E:unknown_title_screen_related_end
+P:1E8F:prologue_sprite_other
+P:1EB9:prologue_sprite_momo
+P:1EDF:text_prologue_start:"mukashi mukashi..."
+P:2174:gfx_burgers_interior
+P:2200:gfx_burgers_interior_end
+P:2201:gfx_ice_interior
+P:2267:gfx_home_interior:The one next to the cat
+P:2303:gfx_home_interior_end
+P:2304:gfx_apartment_interior
+P:2431:gfx_apartment_interior_end
 P:2541:momo_house_graphics_start
 P:25EF:momo_house_graphics_end
+P:2670:building_interior_load
+P:2772:building_leave
+P:9297:routines_car_game
+P:9435:car_game_fail:various branches in here related to failure and going to game over screen
+P:9492:car_game_fail_end
+P:9527:collison_related_car_game:could be a subtract health sub? (or other could be)
+P:9551:collision_routine_car_game
+P:9F35:unknown_car_game_related:possibly bottom HUD, but some could be data like when cars appear
+P:A381:gfx_car_game_sprites
+P:A40A:gfx_car_minigame_road:road BG
+P:AB8A:gfx_car_minigame_road_end:looping road bg ends here
+P:B0C1:gfx_fortune_teller
+P:B1A6:gfx_fortune_teller_end
+P:B211:text_fortune_teller_instructions
 P:10017:big_ram_init_sub:Initialize numerous non-ZP ram locations to various values
 P:1006D:skip_skiploop_check
 P:1007A:loop_807A
 P:10080:skip_loop_8080
+P:10259:dialogue_code_start
+P:102A2:dialogue_code_end
 P:10343:loop_8343
 P:10351:skipjsr_8351
 P:109B4::X and Y as outside params?
 P:109E6:momo_sprite_code_pt1
+P:10C70:momo_sprite_code_pt1_end
 P:10C72:sprite_data_momo:For basic walking and jumping
 P:10CBF:sprite_data_momo_end
 P:10CD5:momo_sprite_code_pt2
-P:10EBC:momo_sprite_code_pt2_end
+P:10EB6:momo_sprite_code_pt2_end
+P:10EB7:area_loading_code_start
+P:11015:area_loading_code_end
+P:114B4:gfx_momo_anim:possibly physics involved but seems to be animation frames
+P:115D4:gfx_town_books_to_apts
+P:1173E:gfx_town_books_to_apts_end
+P:1173F:gfx_house_near_pier
+P:117EF:gfx_house_near_pier_end
+P:117F0:gfx_house_near_cat:cat wall to boy in tree
+P:11946:gfx_house_near_cat_end
 P:11947:map_data_start
 P:11DE0:map_data_more:Jewlery store starts here. More areas below
 P:1236C:map_data_shops:main shops area; "fu ri - ji" to burgers
 P:1257D:map_data_more_shops:game corner to CDs
 P:12586:map_data_shops_end:burgers around here
 P:126E7:map_data_more_shops_end
+P:12A3B:gfx_factory:Factory with sandbags
+P:12B00:gfx_factory_end
 P:13AD3:set_033C_to_0_copy2
 P:13C75:set_033C_to_0_copy
 P:13DD5:set_033C_to_0
@@ -44,6 +86,7 @@ P:14928:cd_shop_pointers_low:track name pointers (low half)
 P:14938:cd_shop_track_titles
 P:14AB7:cd_shop_track_titles_end
 P:15FFF:mmc1_bank_control
+P:16F32:text_fortune_teller_pre:Dog asking if you want to
 P:17FFF:mmc1_chr0_select
 P:18314:pointer_table_music_related
 P:18353:pointer_table_music_related_end
@@ -183,11 +226,32 @@ P:1D850:no_inx_2
 P:1D86E:loop_exit_D86E
 P:1D98A:fill_with_F8_by_4:Put F8 into every 4th byte on 07xx page
 P:1D98E:loop_D98E
+P:1DC14:gfx_portrait_CD_lady:14 bytes
+P:1DC22:gfx_portrait_electronics_store_owner:14 bytes\nAppliances?
+P:1DC5C:gfx_portrait_dog_talking_to_cop:36 bytes\n\nAlso jewelry store owner
+P:1DCA4:gfx_portrait_cop:36 bytes
+P:1DCC8:gfx_portrait_jewelry_store_owner:36 bytes
+P:1DD10:gfx_portrait_popcorn_man_greet:36 bytes
 P:1DFFF:mmc1_chr1_select
+P:1E0CC:gfx_portrait_momo_sleepy:22 bytes (to 1E0E1)
+P:1E0E2:gfx_portrait_momo_shocked
+P:1E0F8:gfx_portrait_momo_mouth_wide:part of morning intro exchange
+P:1E10E:gfx_portrait_momo_cheerful
+P:1E124:gfx_portrait_dog_concerned
+P:1E148:gfx_portrait_dog_cheerful
+P:1E16B:gfx_portrait_dog_cheerful_end
+P:1E22A:gfx_portrait_momo_cheerful_parents:different copy when she's talking to parents?
+P:1E240:gfx_portrait_momo_questioning
+P:1E256:gfx_portrait_dog_cheerful_parents:also different copy in indoor scene with parents
+P:1E2BC:gfx_portrait_mother_concerned
+P:1E2D2:gfx_portrait_father_concerned
 P:1E635:return_1:suspect it branches here as "return 1" statement?
 P:1E865:loop_E865
 P:1E872:loop_E872
 P:1E880:large_switch_case:0x10 - 0x19
+P:1EBDB:game_over_routine
+P:1EC9F:gfx_game_over:nametable for game over screen
+P:1ED8A:gfx_game_over_end
 P:1EDA5::How can it not take this branch?
 P:1EDA9:mystery_EDA9
 P:1EDD5:exit_sub_EDD5
